@@ -1,3 +1,12 @@
+:root {
+    --primary-background: #190422;
+    --secondary-background: #FFFFFF;
+    --primary-background-btn: #BC8AFC;
+    --primary-font-color: #FFFFFF;
+    --secondary-font-color: #000000;
+    --third-font-color: #1F262E;
+}
+
 * {
     margin: 0;
     border: none;
@@ -9,7 +18,7 @@
 
 header {
     max-width: 100%;
-    background-color: #190422;
+    background-color: var(--primary-background);
 
     & .container {
         max-width: 1280px;
@@ -30,18 +39,18 @@ header {
 
         & p {
             font: 400 20px Poppins;
-            color: #FFFFFF;
+            color: var(--primary-font-color);
         }
     }
 
     & button {
         width: 132px;
         height: 58px;
-        background-color: #BC8AFC;
+        background-color: var(--primary-background-btn);
         border-radius: 7px;
         box-shadow: 10px 7px 9px 0px #00000040;
         font: 500 22px Poppins;
-        color: #000000;
+        color: var(--secondary-font-color);
     }
 
     & .menu-burger {
@@ -52,7 +61,7 @@ header {
 .preview {
     padding-top: 117px;
     max-width: 100%;
-    background-color: #190422;
+    background-color: var(--primary-background);
 
     & .container {
         padding-bottom: 181px;
@@ -72,12 +81,12 @@ header {
 
         & h1 {
             font: 600 80px Poppins;
-            color: #FFFFFF;
+            color: var(--primary-font-color);
         }
 
         & p {
             font: 400 20px Poppins;
-            color: #FFFFFF;
+            color: var(--primary-font-color);
         }
 
         & button {
@@ -87,11 +96,11 @@ header {
             align-items: center;
             justify-content: center;
             gap: 4px;
-            background-color: #BC8AFC;
+            background-color: var(--primary-background-btn);
             border-radius: 7px;
             box-shadow: 10px 7px 9px 0px #00000040;
             font: 500 22px Poppins;
-            color: #000000;
+            color: var(--secondary-font-color);
         }
     }
 
@@ -103,7 +112,7 @@ header {
 
 .about {
     max-width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--secondary-background);
 
     & .container {
         position: relative;
@@ -131,12 +140,12 @@ header {
 
                 & h2 {
                     font: 600 48px Poppins;
-                    color: #000000;
+                    color: var(--secondary-font-color);
                 }
 
                 & p {
                     font: 400 20px Poppins;
-                    color: #000000;
+                    color: var(--secondary-font-color);
                 }
 
                 & button {
@@ -146,11 +155,11 @@ header {
                     align-items: center;
                     justify-content: center;
                     gap: 4px;
-                    background-color: #BC8AFC;
+                    background-color: var(--primary-background-btn);
                     border-radius: 7px;
                     box-shadow: 10px 7px 9px 0px #00000040;
                     font: 500 22px Poppins;
-                    color: #000000;
+                    color: var(--secondary-font-color);
                 }
             }
         }
@@ -167,28 +176,28 @@ header {
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    background-color: #FFFFFF;
+    background-color: var(--secondary-background);
     border-radius: 16px;
     box-shadow: 0px 2px 10px 0px #00000026;
 
     & p {
         font: 400 20px Poppins;
-        color: #1F262E;
+        color: var(--third-font-color);
 
         & span {
-            color: #BC8AFC;
+            color: var(--primary-background-btn);
         }
     }
 
     & p:first-child {
         font: 600 48px Poppins;
-        color: #1F262E;
+        color: var(--third-font-color);
     }
 }
 
 footer {
     max-width: 100%;
-    background-color: #190422;
+    background-color: var(--primary-background);
 
     & .container {
         padding-top: 71px;
@@ -210,7 +219,7 @@ footer {
 
             & p {
                 font: 400 22px Poppins;
-                color: #FFFFFF;
+                color: var(--primary-font-color);
             }
         }
 
@@ -221,6 +230,57 @@ footer {
             & img {
                 width: 37px;
                 height: 37px;
+            }
+        }
+    }
+}
+
+.our-service {
+    max-width: 100%;
+    background-color: var(--secondary-background);
+
+    & .container {
+        max-width: 1280px;
+        padding-bottom: 216px;
+        margin: auto;
+
+        & h2 {
+            font: 600 48px Poppins;
+            color: #000000;
+        }
+
+        & img {
+            width: 80px;
+            height: 80px;
+        }
+
+        & .container-grid {
+            padding-top: 40px;
+            display: grid;
+            grid-template-columns: 477px 477px;
+            grid-template-rows: 257px;
+            column-gap: 173px;
+            row-gap: 40px;
+        }
+
+
+
+
+
+        & .service-info {
+            padding-top: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            & p:first-child {
+                font: 600 20px Poppins;
+                color: var(--third-font-color);
+            }
+
+            & p:last-child {
+                font: 400 20px Poppins;
+                color: var(--secondary-font-color);
             }
         }
     }
@@ -272,7 +332,7 @@ footer {
     }
 
     /* не применяются стили, не хочет применяться gap, font-size, только с картинкой сработали */
-    .about .about-info {
+    .about .container .about-info {
         gap: 71px;
 
         .about-img {
@@ -280,7 +340,6 @@ footer {
         }
 
         & div {
-
             & h2 {
                 font-size: 32px;
             }
@@ -292,6 +351,8 @@ footer {
             flex-direction: column;
         }
     }
+
+
 
 
 }
@@ -306,7 +367,8 @@ footer {
             max-width: 358px;
             flex-direction: column;
         }
-/* здесть тоже самое :( */
+
+        /* здесть тоже самое :( */
         & .about-info {
             flex-direction: column;
 
@@ -314,5 +376,27 @@ footer {
                 font-size: 36px;
             }
         }
+    }
+}
+
+
+
+@media(max-width: 1000px) {
+    .statistic {
+        max-width: 1000px;
+    }
+
+    .our-service .container .container-grid {
+        grid-template-columns: 365px 365px;
+        grid-template-rows: 288px;
+
+    }
+}
+
+@media(max-width: 358px) {
+    .our-service .container .container-grid {
+        grid-template-columns: 355px;
+        grid-template-rows: 320 px;
+
     }
 }
